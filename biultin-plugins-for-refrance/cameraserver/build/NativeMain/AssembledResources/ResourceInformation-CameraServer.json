@@ -1,0 +1,11 @@
+{
+  "versions": [
+    "cscore-jnicvstatic-2021.1-windowsx86-64.1-beta-4-5-g20fbb5c-windowsx86-64 (edu.wpi.first.cscore:cscore-jnicvstatic:2021.1.1-beta-4-5-g20fbb5c)"
+  ],
+  "windows": {
+    "x86-64": [
+      "/windows/x86-64/shared/cscorejnicvstatic.dll"
+    ]
+  },
+  "hash": "548932fa857c8f2a0350f658e3c4dd44"
+}

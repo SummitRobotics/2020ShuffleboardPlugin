@@ -1,0 +1,12 @@
+{
+  "versions": [
+    "ntcore-cpp-2021.1-windowsx86-64.1-beta-4-5-g20fbb5c-windowsx86-64 (edu.wpi.first.ntcore:ntcore-cpp:2021.1.1-beta-4-5-g20fbb5c)"
+  ],
+  "windows": {
+    "x86-64": [
+      "/windows/x86-64/shared/ntcore.dll",
+      "/windows/x86-64/shared/ntcorejni.dll"
+    ]
+  },
+  "hash": "a3acda51fa5eff5f2357b9d78ed338e5"
+}

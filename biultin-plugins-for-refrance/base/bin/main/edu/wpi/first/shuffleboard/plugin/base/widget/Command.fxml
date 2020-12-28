@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.StackPane?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="edu.wpi.first.shuffleboard.plugin.base.widget.CommandWidget"
+           fx:id="root"
+           minWidth="100" minHeight="40">
+    <padding>
+        <Insets topRightBottomLeft="8"/>
+    </padding>
+    <ToggleButton fx:id="button"/>
+</StackPane>

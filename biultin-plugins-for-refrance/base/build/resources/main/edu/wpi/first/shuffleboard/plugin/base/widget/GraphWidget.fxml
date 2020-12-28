@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import de.gsi.chart.XYChart?>
+<?import de.gsi.chart.axes.spi.DefaultNumericAxis?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="edu.wpi.first.shuffleboard.plugin.base.widget.GraphWidget"
+           minWidth="288" minHeight="288"
+           fx:id="root">
+    <XYChart fx:id="chart" animated="false" VBox.vgrow="ALWAYS">
+        <axes>
+            <DefaultNumericAxis fx:id="xAxis" side="BOTTOM" name="Time" autoRanging="false" unit="seconds"/>
+            <DefaultNumericAxis fx:id="yAxis" side="LEFT" name="Value"/>
+        </axes>
+    </XYChart>
+</StackPane>

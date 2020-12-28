@@ -1,0 +1,57 @@
+/*
+ * A variation on the builtin Midnight theme, swapping blues and purples for reds.
+ * This theme is merely to display that the builtin themes can be customized and
+ * how custom themes can be provided by plugins, and is not in any way indicative
+ * of the limits of customizing those themes - for details on the builtin themes,
+ * look at the material.css and base.css files in the API project and the
+ * light.css, dark.css, and midnight.css files in the app project on GitHub, as
+ * well as the JavaFX CSS reference:
+ * https://docs.oracle.com/cd/E17802_01/javafx/javafx/1.3/docs/api/javafx.scene/doc-files/cssref.html
+ */
+
+@import "/edu/wpi/first/shuffleboard/app/dark.css";  /* CSS for the dark theme */
+
+
+
+.root {
+    -swatch-100: #14c600;
+    -swatch-200: derive(-swatch-100, -5%);
+    -swatch-300: derive(-swatch-100, -12%);
+    -swatch-400: derive(-swatch-100, -16%);
+    -swatch-500: derive(-swatch-100, -25%);
+}
+
+.toggle-button, .button {
+    -fx-background-color: rgb(64, 64, 64);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.70), 6.0, 0.3, 0, 2);
+}
+
+.toggle-button:selected, .button:selected {
+    -fx-background-color: -swatch-500;
+    -fx-text-fill: black;
+}
+
+.button-raised .button .text, .button-flat .button .text {
+    -fx-text-weight: Bold;
+}
+
+.button:default {
+    -fx-background-color: -swatch-500;
+    -fx-text-fill: black;
+}
+
+.toggle-button:focused, .button:focused, .button:default:focused {
+    -fx-background-color: rgb(48, 48, 48);
+    -fx-text-fill: white;
+}
+
+.toggle-button:focused:selected {
+    -fx-background-color: derive(-swatch-500, -12%);
+    -fx-text-fill: black;
+}
+
+.toggle-button:armed, .toggle-button:selected, .button:armed, .button:default:armed {
+    -fx-background-color: -swatch-500;
+    -fx-text-fill: black;
+}
