@@ -28,8 +28,8 @@ public final class TurretPosition extends SimpleAnnotatedWidget<Number> {
 	@FXML
 	private void initialize() {
         
-        background.fitHeightProperty().bind(root.heightProperty().multiply(1));
-        turret.fitHeightProperty().bind(root.heightProperty().multiply(0.707));
+        background.fitHeightProperty().bind(root.heightProperty().multiply(.958));
+        turret.fitHeightProperty().bind(root.heightProperty().multiply(0.885));
         turret.toFront();
 
         dataProperty().addListener(new ChangeListener<Number>() {

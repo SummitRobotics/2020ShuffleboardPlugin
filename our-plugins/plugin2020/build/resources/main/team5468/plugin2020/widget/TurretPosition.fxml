@@ -16,10 +16,10 @@
       xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="team5468.plugin2020.widget.TurretPosition">
    
-        <ImageView fx:id="background" cache="true" preserveRatio="true">
+        <ImageView fx:id="background" cache="false" preserveRatio="true">
             <Image url="@TurretBackround.png"/>
         </ImageView>
-        <ImageView fx:id="turret" cache="true" preserveRatio="true">
+        <ImageView fx:id="turret" cache="false" preserveRatio="true">
             <Image url="@TurretIcon.png"/>
         </ImageView>
     
