@@ -36,6 +36,8 @@ public final class LEDButtonClone extends SimpleAnnotatedWidget<Number> {
 
 	@FXML
 	//this is 100000000% BAD and PAIN and SIN and retroactivly caused 2020
+	//this HSOULD be done with a custom data type with 2+ bools in it and not this
+	//but i couldent make that work at all despite my mediocure efforts
 	private void initialize() {
 		//the input to this is a intager
 		//the intager can be 00, 01, 10, 11

@@ -6,7 +6,7 @@ import edu.wpi.first.shuffleboard.api.plugin.Plugin;
 import edu.wpi.first.shuffleboard.api.theme.Theme;
 import edu.wpi.first.shuffleboard.api.widget.ComponentType;
 import edu.wpi.first.shuffleboard.api.widget.WidgetType;
-
+import team5468.plugin2020.widget.HoodPosition;
 import team5468.plugin2020.widget.LEDButtonClone;
 import team5468.plugin2020.widget.StatusDisplay;
 import team5468.plugin2020.widget.TurretPosition;
@@ -20,11 +20,12 @@ import java.util.Map;
 @Description(
     group = "team5468",
     name = "2020 plugin",
-    version = "1.0.1",
-    summary = "it works a bit"
+    version = "1.0.2",
+    summary = "it works in theory"
 )
 public final class plugin2020 extends Plugin {
 
+  //gets the css file for the theme and makes it a Theme that can be loaded
   private final Theme customTheme = new Theme(getClass(), "5468Theme", "team5468/plugin2020/theme/5468Theme.css");
 
   @Override
@@ -44,7 +45,8 @@ public final class plugin2020 extends Plugin {
     return List.of(
         WidgetType.forAnnotatedWidget(LEDButtonClone.class), 
         WidgetType.forAnnotatedWidget(StatusDisplay.class), 
-        WidgetType.forAnnotatedWidget(TurretPosition.class)
+        WidgetType.forAnnotatedWidget(TurretPosition.class), 
+        WidgetType.forAnnotatedWidget(HoodPosition.class)
     );
   }
 

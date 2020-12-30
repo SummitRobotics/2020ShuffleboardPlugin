@@ -21,19 +21,23 @@ public final class StatusDisplay extends SimpleAnnotatedWidget<String> {
 	private TextField textField;
 	
 	@FXML
+	//this is bad and should be done with a custom data type with 2 seprate strings as well beacuse this is bad and verry error prone
 	private void initialize() {
-		//makes it visable
+		//makes it corect
 		textField.visibleProperty().set(true);
 		textField.editableProperty().set(false);
 		textField.setFont(Font.font("Roboto", FontWeight.BOLD, 30));
 		textField.setAlignment(Pos.CENTER);
 
-		
+		//whenever the data changes parse that data from the color and show it
 		dataProperty().addListener((__, prev, cur) -> {
+			//if if the data is bad display an error
 			if (cur != null && cur instanceof String) {
+				//splits the color form the data
 				String[] parts = cur.split(":");
 				String status = parts[0];
 				textField.setText(status);
+				//if there is no color in the string make the text white
 				try{
 					String color = parts[1];
 					textField.setStyle("-fx-text-fill: "+color+";");
@@ -41,12 +45,19 @@ public final class StatusDisplay extends SimpleAnnotatedWidget<String> {
 				catch(IndexOutOfBoundsException e){
 					textField.setStyle("-fx-text-fill: white;");
 				}
-				
-				
 			}
 			else{
-				textField.setText("no robot status to display");
-				textField.setStyle("-fx-text-fill: white;");
+				//if the data is not null but is not a string the datatype is wrong
+				if(cur != null){
+					textField.setText("input data type not string");
+					textField.setStyle("-fx-text-fill: red;");
+				}
+				//if the data is null the robot is not conected
+				else{
+					textField.setText("no robot status to display");
+					textField.setStyle("-fx-text-fill: white;");
+				}
+				
 			}
 		});
 		

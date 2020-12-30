@@ -6,8 +6,6 @@ import edu.wpi.first.shuffleboard.api.widget.SimpleAnnotatedWidget;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.image.ImageView;
 
@@ -28,20 +26,19 @@ public final class TurretPosition extends SimpleAnnotatedWidget<Number> {
 	@FXML
 	private void initialize() {
         
+        //sets up the image views
         background.fitHeightProperty().bind(root.heightProperty().multiply(.958));
         turret.fitHeightProperty().bind(root.heightProperty().multiply(0.885));
         turret.toFront();
 
+        //when the data changes change the rotation
         dataProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 Double rotate = newValue.doubleValue();
-                    turret.setRotate(rotate-90);   
+                turret.setRotate(rotate-90);   
             }
-        });
-
-        
-		
+        });	
 	}
 	
     @Override
