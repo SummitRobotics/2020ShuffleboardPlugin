@@ -20,13 +20,13 @@ import java.util.Map;
 @Description(
     group = "team5468",
     name = "2020 plugin",
-    version = "1.0.2",
-    summary = "it works in theory"
+    version = "1.0.3",
+    summary = "it works™"
 )
 public final class plugin2020 extends Plugin {
 
   //gets the css file for the theme and makes it a Theme that can be loaded
-  private final Theme customTheme = new Theme(getClass(), "5468Theme", "team5468/plugin2020/theme/5468Theme.css");
+  private final Theme customTheme = new Theme(getClass(), "5468Theme", "theme/5468Theme.css");
 
   @Override
   public List<Theme> getThemes() {
